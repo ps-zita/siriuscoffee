@@ -86,7 +86,7 @@ body {
     z-index: 998; /* Ensure it stays on top of other content */
     height: 150px; /* Height just enough for 3 rows of text */
     text-transform: lowercase; /* Make menu text lowercase */
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Slab', serif
 }
 
 .menu.active {
@@ -155,7 +155,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
-    height: 420px;
+    height: 440px;
     overflow: hidden;
     z-index: 1000; /* Ensure it stays on top of slides */
     pointer-events: none; /* Ensure it doesn't interfere with user interactions */
