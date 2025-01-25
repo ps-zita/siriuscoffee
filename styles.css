@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text for content */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+.roboto-slab {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.top-bar {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex; /* Flex container */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 10px 10px; /* Padding for spacing */
+    height: 40px; /* Absolute size for navbar */
+    position: fixed; /* Fixed position at the top */
+    width: 100%; /* Ensure full width */
+    top: 0;
+    z-index: 1000; /* Ensure it stays on top */
+    transition: transform 0.3s ease-in-out;
+    text-transform: lowercase; /* Make all text lowercase */
+}
+
+.top-bar .text {
+    flex: 1; /* Take up remaining space */
+    text-align: left; /* Align text to the left */
+    font-size: 48px; /* Larger font size */
+    font-family: 'Times New Roman', serif; /* Original font for language text */
+    text-transform: none; /* Ensure language text is not lowercase */
+}
+
+.top-bar .icons {
+    display: flex; /* Flex container for icons */
+    align-items: center; /* Center icons vertically */
+    margin-right: 7%;
+}
+
+.top-bar .icons img {
+    width: 30px; /* Icon size */
+    height: 30px; /* Icon size */
+    margin-left: 15px; /* Space between icons */
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Slightly less wide */
+    height: 27px; /* Slightly taller */
+    cursor: pointer;
+    margin-left: 15px; /* Space between icons */
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 40px; /* Start below the navbar */
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Completely black background */
+    color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 998; /* Ensure it stays on top of other content */
+    height: 150px; /* Height just enough for 3 rows of text */
+    text-transform: lowercase; /* Make menu text lowercase */
+    font-family: 'Roboto Slab', serif;
+}
+
+.menu.active {
+    transform: translateY(0);
+}
+
+.menu p {
+    font-size: 22px; /* Larger font size for menu items */
+    margin: 10px 0;
+    text-decoration: none; /* Remove underline from menu text */
+}
+
+.menu a {
+    color: #fff; /* Change link color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 8px);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure it stays on top */
+    transition: opacity 1s ease-out;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loading-overlay {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.transparent-overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 420px;
+    overflow: hidden;
+    z-index: 1000; /* Ensure it stays on top of slides */
+    pointer-events: none; /* Ensure it doesn't interfere with user interactions */
+}
+
+.transparent-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+    opacity: 0.3; /* Make it 30% transparent */
+}
+
+.slideshow-container {
+    position: relative; /* Ensure slides overlap each other */
+    max-width: 100%;
+    margin-top: 40px; /* Space below the top bar to ensure the image is visible */
+    background-color: #000; /* Black background */
+    z-index: 1; /* Ensure it stays below the transparent overlay */
+}
+
+.mySlides {
+    position: absolute; /* Ensure slides overlap each other */
+    width: 100%;
+    height: 400px; /* Ensure slides match the container's height */
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.active-slide {
+    opacity: 1;
+}
+
+.content {
+    text-align: center;
+    margin-top: 420px; /* Ensure it starts after the slideshow */
+    position: relative; /* Ensure relative positioning */
+}
+
+.underline {
+    text-decoration: underline; /* Underline for "view the menu" text */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 200px); /* Set a fixed height for each image */
+    gap: 10px;
+    padding: 10px;
+    margin-top: 20px; /* Ensure it starts after the address */
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.additional-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #0000;
+    color: #fff; /* White text */
+    text-align: center; /* Centered text */
+}
+
+.social-icons {
+    margin-bottom: 20px; /* Space below the social icons */
+}
+
+.social-icons img {
+    width: 30px; /* Icon size */
+    height: 30px; /* Icon size */
+    margin: 0 10px; /* Space between icons */
+}
+
+.footer-nav {
+    margin-bottom: 20px; /* Space below the navigation links */
+}
+
+.footer-nav a {
+    margin: 0 15px; /* Space between links */
+    color: #fff; /* White text for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+footer {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    text-align: center; /* Centered text */
+    padding: 0px 0; /* Padding for spacing */
+    margin-top: auto; /* Push footer to the bottom */
+}
+
+.footer-divider {
+    width: 85%; /* 85% of the width */
+    height: 1px; /* Line height */
+    background-color: #fff; /* White line color */
+    margin: 20px auto; /* Center the line and add vertical margin */
+}
+
