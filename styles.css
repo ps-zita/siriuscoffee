@@ -166,7 +166,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the container */
-    opacity: 100%; /* Make it 30% transparent */
+    opacity: 100%; /* change transparency */
 }
 
 .slideshow-container {
