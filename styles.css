@@ -1,3 +1,4 @@
+/* Existing CSS */
 body {
     margin: 0;
     padding: 0;
@@ -165,7 +166,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensure the image covers the container */
-    opacity: 0.3; /* Make it 30% transparent */
+    opacity: 100%; /* Make it 30% transparent */
 }
 
 .slideshow-container {
@@ -198,19 +199,28 @@ body {
     text-decoration: underline; /* Underline for "view the menu" text */
 }
 
+/* Updated CSS for Image Grid */
 .image-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 200px); /* Set a fixed height for each image */
     gap: 10px;
     padding: 10px;
     margin-top: 20px; /* Ensure it starts after the address */
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, minmax(0, 1fr)); /* Set a fixed height for each image */
 }
 
 .image-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+/* Media query for desktop mode */
+@media (min-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, minmax(0, 1fr)); /* Set a fixed height for each image */
+    }
 }
 
 .additional-content {
@@ -257,4 +267,3 @@ footer {
     background-color: #fff; /* White line color */
     margin: 20px auto; /* Center the line and add vertical margin */
 }
-
