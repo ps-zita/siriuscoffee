@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location - Sirius Black</title>
+    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="text" id="topBarText"><a href="index.html">Sirius Black</a></div>
+        <div class="icons">
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png" alt="TikTok"></a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="menu">
+        <p><a href="#">menu</a></p>
+        <p><a href="#">location</a></p>
+        <p><a href="about.html">about</a></p>
+    </div>
+    <div class="background-overlay">
+        <img src="assets/img6.jpg" alt="Background Image" class="background-image">
+        <div class="overlay"></div>
+        <div class="content-container">
+            <img src="assets/img6.jpg" alt="Placeholder Image" class="placeholder-image">
+            <div class="content">
+                <h1>LOCATION</h1>
+                <p>1500 Pascoe Vale RD, Coolaroo VIC 3048</p>
+                <h1>HOURS</h1>
+                <p>Mon-Fri: 8am - 6pm</p>
+                <p>Sat-Sun: 10am - 4pm</p>
+            </div>
+        </div>
+    </div>
+    <div class="spacer-large"></div>
+    <div class="map-section">
+        <div class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.731663815716!2d144.9408233151948!3d-37.66552297977147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d5182b7a7b9%3A0x1f2a3e6b4b4b4b4b!2s1500%20Pascoe%20Vale%20Rd%2C%20Coolaroo%20VIC%203048%2C%20Australia!5e0!3m2!1sen!2sus!4v1614680644691!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class="review-section">
+        <div class="review-container">
+            <div class="review-carousel">
+                <div class="review slide">
+                    <p><strong>John Doe:</strong> Great place to hang out and enjoy a cup of coffee!</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review slide">
+                    <p><strong>Jane Smith:</strong> The ambiance is lovely and the staff is very friendly.</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+                <div class="review slide">
+                    <p><strong>Michael Brown:</strong> Best coffee in town! Highly recommend checking it out.</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png" alt="TikTok"></a>
+        </div>
+        <nav class="footer-nav">
+            <a href="#">location</a>
+            <a href="#">menu</a>
+            <a href="index.html">home</a>
+        </nav>
+        <div>
+            <a><br/>1500 Pascoe Vale RD, Coolaroo VIC 3048</a>
+        </div>
+        <div class="footer-divider"></div>
+        <p>&copy; 2025 Sirius Black.</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="location.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #fff;
+}
+
+.top-bar {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    text-transform: lowercase;
+}
+
+.top-bar .text {
+    flex: 1;
+    text-align: left;
+    font-size: 48px;
+    font-family: 'Times New Roman', serif;
+    text-transform: none;
+}
+
+.top-bar .icons {
+    display: flex;
+    align-items: center;
+    margin-right: 7%;
+}
+
+.top-bar .icons img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 27px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 998;
+    height: 150px;
+    text-transform: lowercase;
+    font-family: 'Roboto Slab', serif
+}
+
+.menu.active {
+    transform: translateY(0);
+}
+
+.menu p {
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(7px, 8px);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-container {
+    position: absolute;
+    top: 40%; /* Increased for more space */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* Ensure it stays above the background */
+}
+
+.placeholder-image {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1; /* 1:1 aspect ratio */
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+}
+
+.spacer-large {
+    height: 200px; /* Increased height for more space */
+}
+
+.map-section {
+    padding: 20px 0;
+    background-color: #000;
+    margin-top: 50vh; /* Add more space above the map section */
+}
+
+.map-container {
+    width: 100%;
+    height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.review-section {
+    background-color: #000;
+    padding: 10px 0; /* Reduced padding for tighter packing */
+    margin-top: -40px; /* Add space above the review section */
+    margin-bottom: -40px; /* Add space below the review section */
+}
+
+.review-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.review-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.review {
+    text-align: center;
+    padding: -100px;
+}
+
+.stars {
+    color: gold;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.social-icons {
+    margin-bottom: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-nav {
+    margin-bottom: 20px;
+}
+
+.footer-nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-divider {
+    width: 85%;
+    height: 1px;
+    background-color: #fff;
+    margin: 20px auto;
+}
+
+@media (min-width: 768px) {
+    .content-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+    }
+
+    .placeholder-image {
+        margin-bottom: 0;
+        margin-right: 20px;
+        aspect-ratio: 4 / 3; /* 4:3 aspect ratio on desktop */
+    }
+
+    .content {
+        text-align: left;
+    }
+}
