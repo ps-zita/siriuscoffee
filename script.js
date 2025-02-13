@@ -35,8 +35,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }, 1000); // Start hiding loading screen after 1 second
 });
 
-
-
 function type() {
     const currentWord = words[currentIndex];
 
@@ -67,16 +65,11 @@ function toggleMenu() {
 
 type();
 
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    const slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].classList.remove("active-slide");
+function toggleReadMore() {
+    const moreText = document.getElementById("more-text");
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+    } else {
+        moreText.style.display = "none";
     }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex - 1].classList.add("active-slide");
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
 }

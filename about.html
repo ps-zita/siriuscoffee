@@ -3,63 +3,79 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Sirius Black</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="top-bar">
-        <div class="text" id="topBarText"><a href="index.html">Sirius Black</a></div>
+    <header class="top-bar">
+        <div id="topBarText" class="text"></div>
         <div class="icons">
-            <a href="https://www.instagram.com/siriusblack_coffee/?hl=en"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@sirius.coffee"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png" alt="TikTok"></a>
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png" alt="TikTok"></a>
             <div class="menu-icon" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
-    </div>
-    <div class="menu" id="menu">
-        <p><a href="#">menu</a></p>
+    </header>
+
+    <div id="menu" class="menu">
+        <p><a href="menu.html">menu</a></p>
         <p><a href="location.html">location</a></p>
-        <p><a href="about.html">about</a></p>
+        <p><a href="#">about</a></p>
     </div>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="https://scontent.fadl6-1.fna.fbcdn.net/v/t39.30808-6/473036167_122180385980096515_5380093634303106744_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=XFEkGuU9i0EQ7kNvgFW5fRt&_nc_zt=23&_nc_ht=scontent.fadl6-1.fna&_nc_gid=AJNumlhJkMcp-Fth5v3DVyV&oh=00_AYAG2oQf0tT5BpllJET29ICbKQR3USjVyoHoJZxMD6MJ4g&oe=6792A5CE" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="https://scontent.fadl6-1.fna.fbcdn.net/v/t39.30808-6/472871509_122180386034096515_8259630072216457796_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ypn3LBe4T2MQ7kNvgG4EqfH&_nc_zt=23&_nc_ht=scontent.fadl6-1.fna&_nc_gid=AAZ821gCKe-BSYOgZdjFO4O&oh=00_AYAZ-Fhtq_TsZjTrDSiKvphRcEMwh_k8FijoRxhMmOuuIw&oe=6792CF0A" style="width:100%">
-        </div>
-        <div class="mySlides fade">
-            <img src="https://scontent.fadl6-1.fna.fbcdn.net/v/t39.30808-6/471493574_122198633936219811_6700057266614423417_n.jpg?stp=cp6_dst-jpg_tt6&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=u9xeLHR_AN8Q7kNvgEExYlU&_nc_zt=23&_nc_ht=scontent.fadl6-1.fna&_nc_gid=AUuY8Rcid_y2gRjG07p3NNz&oh=00_AYBU2rZDwE3GfPA4s6fa5CO9T8ypmghgNjjyIiCcLk6nTw&oe=6792A77F" style="width:100%">
+
+    <div class="about-header">
+        <img src="https://media.istockphoto.com/id/1400194993/photo/cappuccino-art.jpg?s=612x612&w=0&k=20&c=_nYOcyQ15cYEeUYgUzkC5qG946nkCwU06NiWKt1s8SE=" alt="About Us" class="about-image">
+        <div class="overlay"></div>
+        <div class="about-title">
+            <h1>About Us</h1>
         </div>
     </div>
+
+    <div class="about-banner">
+        <img src="https://st4.depositphotos.com/1875497/29420/i/450/depositphotos_294209826-stock-photo-abstract-blur-coffee-shop-cafe.jpg" alt="Banner Image">
+    </div>
+
     <div class="content">
-        <h1>ABOUT US</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="about-text">
+            <h2>Our Story</h2>
+            <p>Imagine a world where the ordinary becomes extraordinary, where the daily grind transforms into a magical escape.</p>
+            <a href="#" class="read-more" onclick="toggleReadMore()">Read More</a>
+            <div id="more-text" class="more-text">
+                <p>Welcome to Sirius Black Drive-Thru Coffee, where the art of coffee meets the thrill of the unknown.</p>
+                <p>Inspired by the rebellious spirit of our namesake, Sirius Black, we're on a mission to revolutionize the coffee experience. Our expert brewers are masterful alchemists, conjuring rich flavors and aromas that transport you to a realm beyond the mundane.</p>
+                <p>Every sip is a testament to our passion for innovation and quality. Our coffee beans are sourced from the most remote, mystical corners of the globe, carefully selected to ensure an unparalleled taste experience.</p>
+                <p>As you drive through our enchanted portal, you'll be greeted by our team of coffee wizards, who will guide you through a menu that's as much a journey of discovery as it is a culinary delight. Whether you're a coffee connoisseur or just looking for a magical pick-me-up, we invite you to join the Sirius Black Drive-Thru Coffee odyssey.</p>
+                <p>So why settle for ordinary coffee when you can have an extraordinary experience? Come and taste the magic for yourself. The adventure begins here...</p>
+            </div>
+        </div>
     </div>
+
     <div class="additional-content">
         <div class="social-icons">
-            <a href="https://www.instagram.com/siriusblack_coffee/?hl=en"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram"></a>
-            <a href="https://www.tiktok.com/@sirius.coffee"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png" alt="TikTok"></a>
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/instagram-white-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/tiktok-white-icon.png" alt="TikTok"></a>
         </div>
         <nav class="footer-nav">
             <a href="location.html">location</a>
-            <a href="#">menu</a>
-            <a href="index.html">home</a> <!-- Replace "about" with "home" -->
+            <a href="menu.html">menu</a>
+            <a href="about.html">about</a>
         </nav>
         <div>
             <a><br/>1500 Pascoe Vale RD, Coolaroo VIC 3048</a>
         </div>
     </div>
+
     <footer>
         <div class="footer-divider"></div>
-        <p>&copy; 2025 Sirius Black.</p>
+        <p>&copy; 2025 Sirius Coffee. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
