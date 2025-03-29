@@ -226,7 +226,7 @@ footer {
 
 .about-banner img {
     width: calc(100% - 20px); /* Full width minus padding */
-    height: auto;
+    height: 50vh;
     aspect-ratio: 4 / 2.5; /* Slightly larger aspect ratio */
     object-fit: cover;
 }
