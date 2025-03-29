@@ -186,7 +186,7 @@ footer {
 
 .about-image {
     width: 100%;
-    height: 50vh; /* Fixed height */
+    height: 20vh; /* Fixed height */
     object-fit: cover;
     position: absolute;
     top: 0;
