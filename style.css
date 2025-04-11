@@ -84,7 +84,7 @@ body {
     transform: translateY(-100%);
     transition: transform 0.3s ease-in-out;
     z-index: 998;
-    height: 160px;
+    height: 150px;
     text-transform: lowercase;
     font-family: 'Roboto Slab', serif
 }
@@ -186,7 +186,7 @@ footer {
 
 .about-image {
     width: 100%;
-    height: 20vh; /* Fixed height */
+    height: 50vh; /* Fixed height */
     object-fit: cover;
     position: absolute;
     top: 0;
@@ -226,7 +226,7 @@ footer {
 
 .about-banner img {
     width: calc(100% - 20px); /* Full width minus padding */
-    height: 50vh;
+    height: auto;
     aspect-ratio: 4 / 2.5; /* Slightly larger aspect ratio */
     object-fit: cover;
 }
